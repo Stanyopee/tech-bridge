@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="body"></div>
+
+    <script>
+      const people = [
+        {
+          Name: "olu",
+          Image:
+            "https://i.pinimg.com/736x/cf/6d/0d/cf6d0d9ccc92297739236f35ec3c7a5e.jpg",
+          occupation: "officer",
+        },
+
+        {
+          Name: "alabi",
+          Image:
+            "https://i.pinimg.com/736x/cf/6d/0d/cf6d0d9ccc92297739236f35ec3c7a5e.jpg",
+          occupation: "sonographer",
+        },
+
+        {
+          Name: "jovit",
+          Image:
+            "https://i.pinimg.com/736x/cf/6d/0d/cf6d0d9ccc92297739236f35ec3c7a5e.jpg",
+          occupation: "nurse",
+        },
+
+        {
+          Name: "tega",
+          Image:
+            "https://i.pinimg.com/736x/cf/6d/0d/cf6d0d9ccc92297739236f35ec3c7a5e.jpg",
+          occupation: "engineer",
+        },
+
+        {
+          Name: "stanley",
+          Image:
+            "https://i.pinimg.com/736x/cf/6d/0d/cf6d0d9ccc92297739236f35ec3c7a5e.jpg",
+          occupation: "doctor",
+        },
+
+        {
+          Name: "phone guru",
+          Image:
+            "https://i.pinimg.com/736x/f6/64/21/f664217ea9211bef1c318f434487ec73.jpg",
+          occupation: "itel",
+        },
+
+        {
+          Name: "star",
+          Image:
+            "https://i.pinimg.com/236x/4e/bf/61/4ebf61c8743198419d0c407ea93dbe80.jpg",
+          occupation: "faster",
+        },
+
+        {
+          Name: "iphone",
+          Image:
+            "https://i.pinimg.com/736x/cf/6d/0d/cf6d0d9ccc92297739236f35ec3c7a5e.jpg",
+          occupation: "phone seller",
+        },
+      ]
+
+      let body = document.querySelector("#body");
+
+      people.forEach((person) => {
+        let card = document.createElement("div");
+        card.classList.add("card");
+        body.appendChild(card);
+
+        let image = document.createElement("img");
+        image.src = person.Image;
+        card.appendChild(image);
+
+        let name = document.createElement("h2");
+        name.textContent = person.Name
+        card.appendChild(name);
+
+        let occupation = document.createElement("p");
+        occupation.textContent = person.occupation;
+        card.appendChild(occupation);
+      });
+    </script>
+  </body>
+</html>
